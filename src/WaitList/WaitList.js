@@ -12,8 +12,7 @@ export default class WaitList extends React.Component {
       return (
         <div key={guest.id}>
           <h2>{guest.name}</h2>
-          <p>{guest.count}</p>
-          <p>{guest.phone}</p>
+          <p>guest count: {guest.count}</p>
         </div>
       )
     })

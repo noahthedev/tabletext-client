@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default class LandingPage extends React.Component {
 
@@ -6,7 +6,6 @@ export default class LandingPage extends React.Component {
     return (
       <div>
         <h1>TableText</h1>
-        
       </div>
     )
   }

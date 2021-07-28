@@ -16,6 +16,24 @@ const GUESTS = [
     name: 'Joe Rogan',
     phone: '+11234567890',
     count: 8
+  },
+  {
+    id: 4,
+    name: 'Tom Waits',
+    phone: '+11234567890',
+    count: 6
+  },
+  {
+    id: 5,
+    name: 'John Galt',
+    phone: '+11234567890',
+    count: 2
+  },
+  {
+    id: 6,
+    name: 'Holden Caulfield',
+    phone: '+11234567890',
+    count: 1
   }
 
 ]

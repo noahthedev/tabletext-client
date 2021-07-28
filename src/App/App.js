@@ -6,6 +6,7 @@ import GUESTS from '../guests'
 import ApiContext from '../ApiContext'
 import WaitList from '../WaitList/WaitList'
 import LandingPage from '../LandingPage/LandingPage'
+import NavBar from '../NavBar/NavBar'
 
 export default class App extends React.Component {
   state = {
@@ -19,6 +20,7 @@ export default class App extends React.Component {
     return (
       <ApiContext.Provider value={value}>
         <div className='App'>
+          <NavBar/>
           <Route exact path='/' component={LandingPage}/>
           <Route path='/waitlist' component={WaitList}/>
         </div>

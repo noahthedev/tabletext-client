@@ -6,6 +6,7 @@ export default class LandingPage extends React.Component {
     return (
       <div>
         <h1>TableText</h1>
+        <p>TableText is a waiting list app that allows you to text your guests once their table is ready.</p>
       </div>
     )
   }

@@ -15,6 +15,25 @@ export default class App extends React.Component {
     guests: GUESTS
   }
 
+  renderRoutes() {
+    return (
+      <>
+        <Route 
+          exact 
+          path='/' 
+          component={LandingPage}
+        />
+        <Route 
+          path='/waitlist' 
+          component={WaitList}
+        />
+        <Route 
+          path = '/guest/:guestId' component={GuestCard}
+        />
+      </>
+    )      
+  }
+
   render() {
     const value = {
       guests: this.state.guests
@@ -23,9 +42,7 @@ export default class App extends React.Component {
       <ApiContext.Provider value={value}>
         <div className='App'>
           <NavBar/>
-          <Route exact path='/' component={LandingPage}/>
-          <Route path='/waitlist' component={WaitList}/>
-          <Route path = '/guest/:guestId' component={GuestCard}/>
+          {this.renderRoutes()}
           <footer>
             <Footer/>
           </footer>

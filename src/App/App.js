@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
 import { Route } from 'react-router-dom'
-//import { config } from '../config'
-import GUESTS from '../guests'
+import { config } from '../config'
+//import GUESTS from '../guests'
 import ApiContext from '../ApiContext'
 import WaitList from '../WaitList/WaitList'
 import LandingPage from '../LandingPage/LandingPage'
@@ -13,7 +13,19 @@ import CreateGuest from '../CreateGuest/CreateGuest'
 
 export default class App extends React.Component {
   state = {
-    guests: GUESTS
+    guests: []
+  }
+
+  componentDidMount() {
+    fetch(`${config.API_ENDPOINT}/waitlist`)
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        }
+        throw new Error(response.statusText)
+      })
+      .then(guests => this.setState({guests}))
+      .catch(error => console.error(error.message))
   }
 
   renderRoutes() {

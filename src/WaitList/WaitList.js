@@ -14,8 +14,8 @@ export default class WaitList extends React.Component {
       return (
         <div key={guest.id} className='guest'>
           <Link to={`/guests/${guest.id}`}>
-          <h2>{guest.name}</h2>
-          <p>guest count: {guest.count}</p>
+          <h2>{guest.guestname}</h2>
+          <p>guest count: {guest.guestcount}</p>
           </Link>
         </div>
       )

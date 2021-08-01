@@ -19,8 +19,8 @@ export default class GuestCard extends React.Component {
     const guest = this.findGuest(guests, guestId) || {}
     return (
       <div className='guest-card'>
-        <h1>{guest.name}</h1>
-        <p>guest count: {guest.count}</p>
+        <h1>{guest.guestname}</h1>
+        <p>guest count: {guest.guestcount}</p>
         <p>phone: {guest.phone}</p>
         <button>Text Guest</button>
         <button>Delete Guest</button>

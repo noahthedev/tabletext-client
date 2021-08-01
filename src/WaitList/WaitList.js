@@ -1,9 +1,11 @@
 import React from 'react'
 import './WaitList.css'
+import { Link } from 'react-router-dom'
 import ApiContext from '../ApiContext'
 
 
 export default class WaitList extends React.Component {
+  
   static contextType = ApiContext
 
   render() {
@@ -11,8 +13,10 @@ export default class WaitList extends React.Component {
     const guestList = guests.map((guest) => {
       return (
         <div key={guest.id} className='guest'>
+          <Link to={`/guests/${guest.id}`}>
           <h2>{guest.name}</h2>
           <p>guest count: {guest.count}</p>
+          </Link>
         </div>
       )
     })

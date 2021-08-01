@@ -20,9 +20,10 @@ export default class GuestCard extends React.Component {
     return (
       <div>
         <h1>{guest.name}</h1>
-        <p>{guest.count}</p>
-        <p>{guest.phone}</p>
+        <p>guest count: {guest.count}</p>
+        <p>phone: {guest.phone}</p>
         <button>Text Guest</button>
+        <button>Delete Guest</button>
       </div>
     )
   }

@@ -17,8 +17,8 @@ export default class CreateGuest extends React.Component {
             <input type='number' id='count-input' name='guest-count' required/>
           </div>
           <div>
-            <label htmlFor='number-input'>Phone Number</label>
-            <input type='text' id='number-input' name='guest-number' required/>
+            <label htmlFor='phone-input'>Phone Number</label>
+            <input type='text' id='phone-input' name='guest-phone' required/>
           </div>
           <div className='button-container'>
           <button type='submit'>Add Guest</button>

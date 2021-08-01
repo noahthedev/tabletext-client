@@ -29,7 +29,7 @@ export default class App extends React.Component {
           component={WaitList}
         />
         <Route 
-          path = '/guest/:guestId' component={GuestCard}
+          path = '/guests/:guestId' component={GuestCard}
         />
         <Route  
           path='/addnew'

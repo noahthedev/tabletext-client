@@ -18,7 +18,7 @@ export default class GuestCard extends React.Component {
     const { guestId } = this.props.match.params
     const guest = this.findGuest(guests, guestId) || {}
     return (
-      <div>
+      <div className='guest-card'>
         <h1>{guest.name}</h1>
         <p>guest count: {guest.count}</p>
         <p>phone: {guest.phone}</p>

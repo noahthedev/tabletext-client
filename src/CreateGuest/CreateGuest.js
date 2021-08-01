@@ -5,7 +5,7 @@ export default class CreateGuest extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='form-div'>
         <h2>Add New Guest</h2>
         <form className='guest-form'>
         <div>

@@ -8,6 +8,7 @@ import WaitList from '../WaitList/WaitList'
 import LandingPage from '../LandingPage/LandingPage'
 import NavBar from '../NavBar/NavBar'
 import GuestCard from '../GuestCard/GuestCard'
+import Footer from '../Footer/Footer'
 
 export default class App extends React.Component {
   state = {
@@ -25,7 +26,9 @@ export default class App extends React.Component {
           <Route exact path='/' component={LandingPage}/>
           <Route path='/waitlist' component={WaitList}/>
           <Route path = '/guest/:guestId' component={GuestCard}/>
-          <footer>Copyright 2021 Noah Roberts</footer>
+          <footer>
+            <Footer/>
+          </footer>
         </div>
       </ApiContext.Provider>
     )

@@ -10,7 +10,7 @@ export default class WaitList extends React.Component {
     const { guests=[] } = this.context
     const guestList = guests.map((guest) => {
       return (
-        <div key={guest.id}>
+        <div key={guest.id} className='guest'>
           <h2>{guest.name}</h2>
           <p>guest count: {guest.count}</p>
         </div>
@@ -18,6 +18,7 @@ export default class WaitList extends React.Component {
     })
 
     return (
+      
       <div className='guest-list'>
         {guestList}
       </div>

@@ -46,8 +46,12 @@ export default class App extends React.Component {
     return (
       <ApiContext.Provider value={value}>
         <div className='App'>
-          <NavBar/>
-          {this.renderRoutes()}
+          <nav>
+            <NavBar/>
+          </nav>
+          <main>
+            {this.renderRoutes()}
+          </main>
           <footer>
             <Footer/>
           </footer>

@@ -10,6 +10,14 @@ export default class NavBar extends React.Component {
         <h1>
           <Link to='/' className='nav-header'>TableText</Link>
         </h1>
+        <ul className='nav-links'>
+          <li>
+            <Link to='/waitlist'>Waitlist</Link>
+          </li>
+          <li>
+            <Link to='/addnew'>Add Guest</Link>
+          </li>
+        </ul>
       </div>
     )
   }

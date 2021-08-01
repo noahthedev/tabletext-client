@@ -9,6 +9,7 @@ import LandingPage from '../LandingPage/LandingPage'
 import NavBar from '../NavBar/NavBar'
 import GuestCard from '../GuestCard/GuestCard'
 import Footer from '../Footer/Footer'
+import CreateGuest from '../CreateGuest/CreateGuest'
 
 export default class App extends React.Component {
   state = {
@@ -29,6 +30,10 @@ export default class App extends React.Component {
         />
         <Route 
           path = '/guest/:guestId' component={GuestCard}
+        />
+        <Route  
+          path='/addnew'
+          component={CreateGuest}
         />
       </>
     )      

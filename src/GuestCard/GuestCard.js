@@ -31,6 +31,22 @@ export default class GuestCard extends React.Component {
       })
   }
 
+  handleClickSms = (phoneNumber, e) => {
+    e.preventDefault();
+    const guestPhone = {
+      phone: phoneNumber
+    }
+    fetch(`${config.API_ENDPOINT}/sms`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body:JSON.stringify(guestPhone)  
+    })
+  } 
+    
+      
+
   findGuest = (guests=[], guestId) => guests.find(guest => guest.id === parseInt(guestId))
 
   render() {
@@ -42,7 +58,7 @@ export default class GuestCard extends React.Component {
         <h1>{guest.guestname}</h1>
         <p>guest count: {guest.guestcount}</p>
         <p>phone: {guest.phone}</p>
-        <button>Text Guest</button>
+        <button onClick={e => {this.handleClickSms(guest.phone, e)}}>Text Guest</button>
         <button onClick={this.handleClickDelete}>Delete Guest</button>
       </div>
     )

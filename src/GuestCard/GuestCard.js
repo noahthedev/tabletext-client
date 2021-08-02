@@ -1,15 +1,35 @@
 import React from 'react'
 import './GuestCard.css'
 import ApiContext from '../ApiContext'
+import { config } from '../config'
 
 export default class GuestCard extends React.Component {
   static defaultProps = {
     match: {
       params: {}
-    }
+    },
   }
 
   static contextType = ApiContext
+
+  handleClickDelete = e => {
+    e.preventDefault()
+    const { guestId } = this.props.match.params
+
+    fetch(`${config.API_ENDPOINT}/waitlist/${guestId}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+      .then(() => {
+        this.context.deleteGuest(guestId)
+        this.props.history.push(`/waitlist`)
+      })
+      .catch(error => {
+        console.error({ error })
+      })
+  }
 
   findGuest = (guests=[], guestId) => guests.find(guest => guest.id === parseInt(guestId))
 
@@ -23,7 +43,7 @@ export default class GuestCard extends React.Component {
         <p>guest count: {guest.guestcount}</p>
         <p>phone: {guest.phone}</p>
         <button>Text Guest</button>
-        <button>Delete Guest</button>
+        <button onClick={this.handleClickDelete}>Delete Guest</button>
       </div>
     )
   }

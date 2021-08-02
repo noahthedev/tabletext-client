@@ -28,6 +28,20 @@ export default class App extends React.Component {
       .catch(error => console.error(error.message))
   }
 
+  handleAddGuest = guest => {
+    this.setState({
+      guests: [
+        ...this.state.guests, guest
+      ]
+    })
+  }
+
+  handleDeleteGuest = guestId => {
+    this.setState({
+      guests: this.state.guests.filter(guest => guest.id !== guestId)
+    })
+  }
+
   renderRoutes() {
     return (
       <>
@@ -53,7 +67,9 @@ export default class App extends React.Component {
 
   render() {
     const value = {
-      guests: this.state.guests
+      guests: this.state.guests,
+      addGuest: this.handleAddGuest,
+      deleteGuest: this.handleDeleteGuest
     }
     return (
       <ApiContext.Provider value={value}>

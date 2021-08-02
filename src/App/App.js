@@ -38,7 +38,7 @@ export default class App extends React.Component {
 
   handleDeleteGuest = guestId => {
     this.setState({
-      guests: this.state.guests.filter(guest => guest.id !== guestId)
+      guests: this.state.guests.filter(guest => guest.id !== parseInt(guestId))
     })
   }
 

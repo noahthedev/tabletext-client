@@ -41,8 +41,10 @@ export default class GuestCard extends React.Component {
       headers: {
         'content-type': 'application/json'
       },
-      body:JSON.stringify(guestPhone)  
+      body: JSON.stringify(guestPhone)  
     })
+      .then(response => (console.log(response)))
+      .catch(error => console.log(error))
   } 
     
       

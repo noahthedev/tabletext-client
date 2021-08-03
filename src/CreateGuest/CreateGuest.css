@@ -5,3 +5,7 @@
 .guest-form label {
   display: block;
 }
+
+.phone-input {
+  margin: auto;
+}

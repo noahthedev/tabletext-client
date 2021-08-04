@@ -1,4 +1,24 @@
 .app-info {
-  text-align: center;
+  width: 80%;
+  margin: auto;
+  font-size: large;
 }
 
+p {
+  margin-top: 50px;
+}
+
+@media all and (min-width: 800px) {
+  .button-container {
+    width: 20%;
+    margin: auto;
+  }
+
+  .app-info {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    font-size: large;
+  }
+
+}

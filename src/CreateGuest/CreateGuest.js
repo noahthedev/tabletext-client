@@ -6,15 +6,7 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
 export default class CreateGuest extends React.Component {
-  state = {
-    phoneNumber: ''
-  }
-
-  updateNumber = (num) => {
-    this.setState({
-      phoneNumber: num
-    })
-  }
+  state = {}
 
   static contextType = ApiContext
 
@@ -23,7 +15,7 @@ export default class CreateGuest extends React.Component {
     const newGuest = {
       guestname: e.target['guest-name'].value,
       guestcount: e.target['guest-count'].value,
-      phone: this.state.phoneNumber
+      phone: this.state.phone
     }
     fetch(`${config.API_ENDPOINT}/waitlist`, {
       method: 'POST',
@@ -53,18 +45,19 @@ export default class CreateGuest extends React.Component {
         onSubmit={this.handleSubmit}>
         <div>
             <label htmlFor='name-input'>Name</label>
-            <input type='text' id='name-input' name='guest-name' required autoFocus/>
+            <input type='text' id='name-input' name='guest-name' required/>
           </div>
           <div>
             <label htmlFor='count-input'>Count</label>
             <input type='number' id='count-input' name='guest-count' required/>
           </div>
-          <div className='phone-input'>
+          
             <label htmlFor='PhoneInput'>Phone Number</label>
+          <div className='phone-input'> 
           <PhoneInput
             defaultCountry="US" 
-            value={undefined}
-            onChange={this.updateNumber}
+            value={this.state.phone}
+            onChange={phone => this.setState({ phone })}
           />
           </div>
           <div className='button-container'>

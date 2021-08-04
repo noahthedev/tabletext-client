@@ -4,6 +4,9 @@ import ApiContext from '../ApiContext'
 import { config } from '../config'
 
 export default class GuestCard extends React.Component {
+  state = {
+    message: ''
+  }
   static defaultProps = {
     match: {
       params: {}
@@ -43,7 +46,10 @@ export default class GuestCard extends React.Component {
       },
       body: JSON.stringify(guestPhone)  
     })
-      .then(response => (console.log(response)))
+      .then(response => response.json())
+      .then(res => this.setState({ 
+        message: res.message
+      }))
       .catch(error => console.log(error))
   } 
     
@@ -62,6 +68,7 @@ export default class GuestCard extends React.Component {
         <p>phone: {guest.phone}</p>
         <button onClick={e => {this.handleClickSms(guest.phone, e)}}>Text Guest</button>
         <button onClick={this.handleClickDelete}>Delete Guest</button>
+        <h3>{this.state.message}</h3>
       </div>
     )
   }

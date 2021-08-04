@@ -1,15 +1,23 @@
-
-
-main {
-  margin-top: 100px;
-  padding-bottom: 70px;
+.App {
+  position: relative;
+  min-height: 100vh;
 }
 
+.content-wrap {
+  padding-bottom: 2rem;
+}
+
+.main {
+  padding-top: 100px;
+}
+
+
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
+  height: 2rem;
 }
 
 

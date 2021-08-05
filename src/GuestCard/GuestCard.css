@@ -2,3 +2,13 @@
   text-align: center;
 }
 
+.guest-card p {
+  font-size: 22px;
+}
+
+@media all and (min-width: 800px) {
+  .guest-card {
+  width: 50%; 
+  margin: auto;
+  }
+}

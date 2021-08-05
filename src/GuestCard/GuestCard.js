@@ -66,9 +66,11 @@ export default class GuestCard extends React.Component {
         <h1>{guest.guestname}</h1>
         <p>guest count: {guest.guestcount}</p>
         <p>phone: {guest.phone}</p>
+        <div className='button-container'>
         <button onClick={e => {this.handleClickSms(guest.phone, e)}}>Text Guest</button>
         <button onClick={this.handleClickDelete}>Delete Guest</button>
         <h3>{this.state.message}</h3>
+        </div>
       </div>
     )
   }

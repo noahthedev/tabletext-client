@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is the React client for "[TableText](https://tabletext.vercel.app/)," a web app designed to help restaurants keep a waiting list with the ability to text guests when their table is ready. It talks to the TableText API which you can find [here](https://github.com/noahthedev/tabletext-api).
+This is the React client for [TableText](https://tabletext.vercel.app/), a web app designed to help restaurants keep a waiting list with the ability to text guests when their table is ready. It talks to the TableText API which you can find [here](https://github.com/noahthedev/tabletext-api).
 
 ## Tech Stack
 
@@ -14,11 +14,11 @@ This is the React client for "[TableText](https://tabletext.vercel.app/)," a web
 
 ## Screenshots
 
-### Landing Page
-![landing page](screenshots/landing-page.png)
+### Waitlist
+![waitlist](screenshots/waitlist.png)
  
-### Single Recipe Page 
-![single recipe page](screenshots/single-recipe.png)
+### Guest Page 
+![guestpage](screenshots/guestcard.png)
 
-### Create Recipe Page
-![create recipe page](screenshots/create-recipe.png)
+### Add Guest
+![addguest](screenshots/newguest.png)

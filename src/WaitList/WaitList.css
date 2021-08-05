@@ -1,9 +1,19 @@
 .guest-list {
   text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.guest p {
+  font-size: 20px;
+  margin-top: 0px;
+
 }
 
 .guest {
   background-color: lightgray;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 5px;
 }
 
 .guest a {

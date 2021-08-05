@@ -1,11 +1,11 @@
 .app-info {
   width: 80%;
   margin: auto;
-  font-size: large;
 }
 
 p {
   margin-top: 50px;
+  font-size: 20px;
 }
 
 @media all and (min-width: 800px) {
@@ -18,7 +18,11 @@ p {
     text-align: center;
     width: 70%;
     margin: auto;
-    font-size: large;
+    padding-top: 50px;
+  }
+
+  p {
+   
   }
 
 }
